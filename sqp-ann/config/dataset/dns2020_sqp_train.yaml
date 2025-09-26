@@ -1,0 +1,8 @@
+_target_: sqp_ann.datasets.SQPDataset
+
+audio_dir: ${oc.env:DATASETS_PATH}
+metrics_file: ${oc.env:DATASETS_PATH}dns2020_sqp/metrics.pkl
+sr: ${sr}
+winlen: 5
+winhop: 5
+metric: "pesq"

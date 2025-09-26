@@ -1,0 +1,7 @@
+lr_on_plateau:
+  _target_: sqp_ann.callbacks.LrOnPlateau
+  patience: 5
+  delta: 0.0
+  factor: 0.9
+  run_every: 'epoch'  # ['epoch', 'valid']
+  verbose: true

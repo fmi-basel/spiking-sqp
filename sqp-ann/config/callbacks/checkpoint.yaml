@@ -1,0 +1,5 @@
+checkpoint:
+  _target_: sqp_ann.callbacks.Checkpoint
+  store_best: true
+  store_latest: true
+  verbose: false

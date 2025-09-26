@@ -1,0 +1,7 @@
+early_stop:
+  _target_: sqp_ann.callbacks.EarlyStop
+  metric: 'pcc'
+  patience: 50
+  delta: 0.0
+  run_every: 'valid'  # ['epoch', 'valid']
+  verbose: true

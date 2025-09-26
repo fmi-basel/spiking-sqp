@@ -1,0 +1,2 @@
+logger_cli:
+  _target_: sqp_ann.callbacks.CliLogger

@@ -1,0 +1,41 @@
+# @package _global_
+
+defaults:
+  - dataset: dns2020_sqp_train
+  - dataset@dataset_test:  dns2020_sqp_test_norev
+  - model: dnsmos
+  - trainer: default
+  - callbacks:
+    - logger_cli
+    #- logger_wandb
+    - checkpoint
+    - early_stop
+    - lr_on_plateau
+  - _self_
+
+experiment_name: 'your-project'
+run_name: null
+gpu: null
+seed: 1
+workers: 6
+
+batch_size: 128
+valid_batch_size: 16
+train_valid_split: 0.05
+sr: 16000
+data_hours: 50
+
+epochs: 400
+valid_every: 1
+lr: 1e-3
+
+checkpoint_path: null
+run_test: true
+
+readers_file: ${oc.env:DATASETS_PATH}/dns2020_sqp/readers.pkl
+
+hydra:
+  job:
+    chdir: true
+  run:
+    dir: ./outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}

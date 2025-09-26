@@ -1,0 +1,4 @@
+logger_wandb:
+  _target_: sqp_ann.callbacks.WandbLogger
+  experiment_name: ${experiment_name}
+  run_name: ${run_name}

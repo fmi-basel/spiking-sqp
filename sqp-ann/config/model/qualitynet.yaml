@@ -1,0 +1,16 @@
+_target_: sqp_ann.models.QualityNet
+
+n_fft: 640
+n_mels: 120
+
+hidden_rnn: 100
+hidden_fc: 50
+last_activation: 'none'
+
+preproc: 
+  _target_: torchaudio.transforms.MelSpectrogram
+  sample_rate: ${sr}
+  n_fft: ${model.n_fft}
+  n_mels: ${model.n_mels}
+  power: 2
+  center: False

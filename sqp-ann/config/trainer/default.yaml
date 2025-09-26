@@ -1,0 +1,6 @@
+_target_: sqp_ann.trainers.DefaultTrainer
+
+epochs: ${epochs}
+valid_every: ${valid_every}
+lr: ${lr}
+debug_mode: false
